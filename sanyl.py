@@ -71,7 +71,7 @@ class TwitterClient(object):
                     if parsed_tweet not in tweets:
                         tweets.append(parsed_tweet)
                 else:
-                    tweets.append(parsed_tweets)
+                    tweets.append(parsed_tweet)
             # return parsed tweets
             return tweets
 
