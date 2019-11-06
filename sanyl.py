@@ -4,7 +4,7 @@ from tweepy import OAuthHandler
 from textblob import TextBlob
 
 # query var
-q = 'Donald Trump'
+q = input("Enter query --> ")
 
 # Generic Twitter Class for sent analysis
 
@@ -87,6 +87,9 @@ def main():
     tweets = api.get_tweets(query=q, count=200)
     # picking positive tweets from tweets
     ptweets = [tweet for tweet in tweets if tweet['sentiment'] == 'positive']
+
+    # print query
+    print("Query: " + q)
     # precentage of positive tweets
     print("Positive tweets precentage: {} %".format(
         100*len(ptweets)/len(tweets)))
